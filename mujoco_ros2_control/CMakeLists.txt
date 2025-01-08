@@ -68,5 +68,11 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+
+install(
+  DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/mujoco_plugin
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 pluginlib_export_plugin_description_file(mujoco_ros2_control mujoco_system_plugins.xml)
 ament_package()
